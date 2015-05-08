@@ -14,7 +14,7 @@
     <string name="title_activity_horoscope_detail">HoroscopeDetail</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="sign">Aries</string> // reference this in java and change value w/ if statements?
+    <string name="signTitle"></string>
     <string name="ariesDetail">Extremely sensitive and emotional, you absorb the emotions of others (whether positive or negative) like a sponge. Emotionally vulnerable, you are easily upset and tend to cry readily. You are at your best when you can structure your environment in such a way that you are surrounded by positive, upbeat people. You are very helpful and understanding of the needs of others. Indeed, at times this can be a disadvantage, because you can be a sucker for anyone who needs help. Shy, dreamy, romantic in nature, you delight in retreating into your private fantasy world. Just be careful that you do not get lost in it! Trust your intuitions -- you may be quite psychic. </string>
     <string name="taurusDetail">An idealist, you prefer the grand, the beautiful, the good and the noble. You get very disappointed when your high expectations in life are not met. Very curious by nature, you enjoy traveling and learning about other peoples and cultures. Try to avoid your tendency to ignore the small but important details of living. You are independent and free, and you want others to be that way, too. Optimistic, buoyant and cheerful, others like to have you around. You have an incessant desire to learn as much as possible about metaphysics, religion, philosophy and any other broad, deep subject. Your life tends to be punctuated by bursts of energy and frenetic activity. </string>
     <string name="geminiDetail">You rarely get involved closely with anyone unless he or she has something specific and practical to offer you. You tend to be "all business" when it comes to dealing with others. You\'re usually so intently focused on a particular goal that you rarely have time for social niceties or casual fellowship. But you can definitely be counted on by others to get things done. When you say that you\'ll do something, you do it. As such, you\'re a valuable member of any team situation and will probably rise to a position of leadership within the group. Your trustworthiness and sense of responsibility are unquestioned. But do try to avoid the temptation to "use" others to reach your goals -- they might come to resent you.  </string>
@@ -48,6 +48,22 @@
         <item>Aquarius</item>
         <item>Pisces</item>
     </string-array>
+
+    <string-array name="signDetail_array">
+        <item>@string/ariesDetail</item>
+        <item>@string/taurusDetail</item>
+        <item>@string/geminiDetail</item>
+        <item>@string/cancerDetail</item>
+        <item>@string/leoDetail</item>
+        <item>@string/virgoDetail</item>
+        <item>@string/libraDetail</item>
+        <item>@string/scorpioDetail</item>
+        <item>@string/sagittariusDetail</item>
+        <item>@string/capricornDetail</item>
+        <item>@string/aquariusDetail</item>
+        <item>@string/piscesDetail</item>
+    </string-array>
+    <string name="title_activity_horoscope_game">HoroscopeGame</string>
 
 
 </resources>

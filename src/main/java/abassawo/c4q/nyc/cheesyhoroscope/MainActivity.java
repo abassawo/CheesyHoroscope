@@ -21,7 +21,7 @@ import android.widget.SpinnerAdapter;
 
 
 public class MainActivity extends ActionBarActivity
-       implements NavigationDrawerFragment.NavigationDrawerCallbacks, AdapterView.OnItemSelectedListener {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks, AdapterView.OnItemSelectedListener {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -41,20 +41,7 @@ public class MainActivity extends ActionBarActivity
         Spinner spinner = (Spinner) findViewById(R.id.signs_spinner);
         spinner.setOnItemSelectedListener(this);
 
-        Button button = (Button) findViewById(R.id.openButton);
-        button.setOnClickListener(new View.OnClickListener() {
-
-
-            @Override
-            public void onClick(View v) {
-
-                 Intent detail = new Intent(MainActivity.this, HoroscopeDetail.class);
-                //detail.putExtra("zodiac_Sign", zodiacSign);
-                detail.putExtra("Zodiac_Sign", R.string.leoDetail);
-                startActivity(detail);
-
-            }
-        });
+       
 
 
 
@@ -67,6 +54,35 @@ public class MainActivity extends ActionBarActivity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        Button button = (Button) findViewById(R.id.openButton);
+        button.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                Intent detail = new Intent(MainActivity.this, HoroscopeDetail.class);
+                startActivity(detail);
+            }
+        });
+
+
+
+
+        if (!mNavigationDrawerFragment.isDrawerOpen()) {
+            // Only show items in the action bar relevant to this screen
+            // if the drawer is not showing. Otherwise, let the drawer
+            // decide what to show in the action bar.
+            getMenuInflater().inflate(R.menu.main, menu);
+            restoreActionBar();
+            return true;
+        }
+        return super.onCreateOptionsMenu(menu);
+    }
+
     //@Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String zodiacSign;
@@ -112,20 +128,7 @@ public class MainActivity extends ActionBarActivity
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
 
-
-        if (!mNavigationDrawerFragment.isDrawerOpen()) {
-            // Only show items in the action bar relevant to this screen
-            // if the drawer is not showing. Otherwise, let the drawer
-            // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.main, menu);
-            restoreActionBar();
-            return true;
-        }
-        return super.onCreateOptionsMenu(menu);
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

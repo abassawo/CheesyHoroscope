@@ -2,42 +2,23 @@ package abassawo.c4q.nyc.cheesyhoroscope;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 
-public class HoroscopeDetail extends ActionBarActivity {
-    TextView title;
+public class HoroscopeGame extends ActionBarActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final String zodiacSign =  getIntent().getStringExtra("zodiacSign");
-
-        setContentView(R.layout.activity_horoscope_detail);
-
-
-        title = (TextView) findViewById(R.id.signTitle);
-        title.setText(zodiacSign);
-        //final int zodiacSign =  getIntent().getIntExtra("Zodiac_Sign", zodiacSign);
-
-        //TextView tv = (TextView) findViewById(R.id.zodiac_Detail);
-//        if (zodiacSign.equals("Capricorn")){
-//            tv.setText("Capricorn");
-//        }
-
-
-        //Log.d("test log", "sign = " + zodiacSign);
-
-        //tv.setText(zodiacSign);
+        setContentView(R.layout.activity_horoscope_game);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_horoscope_detail, menu);
+        getMenuInflater().inflate(R.menu.menu_horoscope_game, menu);
         return true;
     }
 
